@@ -1,0 +1,13 @@
+/* Breakpoints
+   ========================================================================== */
+
+@mixin profile-bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn " No existe ningún valor `#{$breakpoint}`. "
+        + "Breakpoints disponibles: #{map-keys($breakpoints)}.";
+  }
+}

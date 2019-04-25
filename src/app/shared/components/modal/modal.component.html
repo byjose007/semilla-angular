@@ -1,0 +1,20 @@
+<div class="c-profile-modal" role="dialog">
+  <section class="c-profile-modal__content">
+    <header class="c-profile-modal__header">
+      <h3>{{title}}</h3>
+      <button *ngIf="showClose" type="button" class="c-profile-modal__close" [attr.aria-label]="'SHARED.COMPONENTS.MODAL.CLOSE' | translate"
+        (click)="closeModal()">
+        <i class="o-ico icon-close-lite"></i>
+      </button>
+    </header>
+    <div class="c-profile-modal__body">
+      <ng-content></ng-content>
+    </div>
+    <footer class="c-profile-modal__footer">
+      <button *ngFor="let button of buttons" type="button" class="o-btn" [ngClass]="'o-btn--'+button.class" [disabled]="button.disabled"
+        (click)="handleAction(button.id)">
+        <span [class.o-btn__wrap]="button.icon"><i *ngIf="button.icon" [ngClass]="'o-ico icon-'+button.icon"></i>{{button.text}}</span>
+      </button>
+    </footer>
+  </section>
+</div>

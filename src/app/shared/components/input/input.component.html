@@ -1,0 +1,19 @@
+<div class="c-profile-input" [class.c-profile-input--focus]="isInputFocus" [class.c-profile-input--group]="isIcon || isButton">
+  <label class="c-profile-input__label" [class.u-visually-hidden]="hiddenLabel" [for]="id">{{label}}</label>
+  <ng-container *ngIf="isIcon || isButton; else normal">
+    <div class="c-profile-input__group">
+      <div *ngIf="isIcon" class="c-profile-input__group-ico">
+        <i class="c-profile-input__ico" [ngClass]="'icon-'+icon"></i>
+      </div>
+      <ng-container [ngTemplateOutlet]="normal"></ng-container>
+      <button *ngIf="isButton" class="c-profile-input__group-ico c-profile-input__group-ico--btn" type="button" (click)="actionHandler()">
+        <i class="c-profile-input__ico" [ngClass]="'icon-'+button"></i>
+      </button>
+    </div>
+  </ng-container>
+  <ng-container [ngTemplateOutlet]="warnings"></ng-container>
+</div>
+
+<ng-template #normal>
+  <ng-content></ng-content>
+</ng-template>

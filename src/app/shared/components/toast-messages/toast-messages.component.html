@@ -1,0 +1,6 @@
+<ul class="c-profile-toast">
+  <li *ngFor="let toast of toasts; trackBy: trackByFn" class="c-profile-toast__item">
+    <c-profile-alert class="c-profile-alert--rounded" [title]="toast.title" [description]="toast.description"
+      [alertType]="toast.alertType" [buttons]="toast.buttons"></c-profile-alert>
+  </li>
+</ul>

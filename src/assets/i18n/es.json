@@ -1,0 +1,41 @@
+{
+  "COMMON": {
+    "LABELS": {
+      "USER": "Usuario",
+      "PASSWORD": "Contraseña"
+    },
+    "DATE": {
+      "TODAY": "Hoy",
+      "YESTERDAY": "Ayer",
+      "MONTHS": {
+        "01": "Enero",
+        "02": "Febrero",
+        "03": "Marzo",
+        "04": "Abril",
+        "05": "Mayo",
+        "06": "Junio",
+        "07": "Julio",
+        "08": "Agosto",
+        "09": "Septiembre",
+        "10": "Octubre",
+        "11": "Noviembre",
+        "12": "Diciembre"
+      }
+    },
+    "SESSION": {
+      "LOGOUT": "Cerrar sesión"
+    }
+  },
+  "MODULES": {
+    "LOGIN": {
+      "ERRORS": {
+        "LOGIN": "Usuario o contraseña incorrecto"
+      },
+      "LEGEND": "Formulario de acceso",
+      "ACCESS": "Acceder"
+    },
+    "DASHBOARD": {
+      "CURRENT_MONTH": "Estamos en {{month}}"
+    }
+  }
+}

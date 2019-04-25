@@ -1,0 +1,15 @@
+<div class="c-profile-alert" [ngClass]="'c-profile-alert--'+alertType" role="alert">
+  <div class="c-profile-alert__content">
+    <i *ngIf="icon" class="c-profile-alert__ico" [ngClass]="'icon-'+_icon"></i>
+    <div class="c-profile-alert__content">
+      <p *ngIf="title" class="c-profile-alert__tit">{{title}}</p>
+      <p *ngIf="description" class="c-profile-alert__desc">{{description}}</p>
+    </div>
+  </div>
+  <ul *ngIf="areButtons">
+    <li *ngFor="let button of buttons">
+      <button type="button" (click)="handleAction(button.id)">{{button.text}}</button>
+    </li>
+  </ul>
+  <button *ngIf="showClose" type="button" [attr.aria-label]="'SHARED.COMPONENTS.MODAL.CLOSE' | translate" (click)="closeAlert()"></button>
+</div>

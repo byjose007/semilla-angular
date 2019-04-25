@@ -1,0 +1,14 @@
+{
+  "name": "mock-server",
+  "version": "0.6.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./server.ts"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "mockserver-node": "^5.5.0",
+    "ts-node": "^7.0.1"
+  }
+}

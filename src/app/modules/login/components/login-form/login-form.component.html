@@ -1,0 +1,18 @@
+<form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend translate="MODULES.LOGIN.LEGEND"></legend>
+    <div>
+      <c-profile-input icon="user-solid" [label]="'COMMON.LABELS.USER' | translate" id="user_input">
+        <input type="text" id="user_input" [placeholder]="'COMMON.LABELS.USER' | translate" formControlName="username" />
+      </c-profile-input>
+    </div>
+    <div>
+      <c-profile-input icon="lock-solid" button="eye-linear" [label]="'COMMON.LABELS.PASSWORD' | translate" id="password_input"
+        (action)="togglePasswordInputType()">
+        <input [type]="passwordInputType" id="password_input" [placeholder]="'COMMON.LABELS.PASSWORD' | translate"
+          formControlName="password" />
+      </c-profile-input>
+    </div>
+    <input type="submit" [disabled]="loginForm.invalid" [value]="'MODULES.LOGIN.ACCESS' | translate">
+  </fieldset>
+</form>

@@ -1,0 +1,5 @@
+<p>{{'MODULES.DASHBOARD.CURRENT_MONTH' | translate: {month: currentMonth} }}</p>
+<p>{{data$ | async}}</p>
+<button type="button" [attr.aria-label]="'COMMON.SESSION.LOGOUT' | translate" (click)="logout()">
+  {{'COMMON.SESSION.LOGOUT' | translate }}
+</button>

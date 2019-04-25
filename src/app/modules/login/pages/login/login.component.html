@@ -1,0 +1,4 @@
+<c-profile-alert class="c-profile-alert--sm u-divider-bottom" *ngIf="backendLoginErrors" alertType="error"
+  [title]="'MODULES.LOGIN.ERRORS.LOGIN' | translate">
+</c-profile-alert>
+<c-profile-login-form (values)="login($event)"></c-profile-login-form>

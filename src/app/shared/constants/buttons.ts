@@ -1,0 +1,8 @@
+export enum Buttons {
+  ACCEPT = 'ACCEPT',
+  CANCEL = 'CANCEL',
+  DELETE = 'DELETE',
+  CREATE = 'CREATE',
+  DOWNLOAD = 'DOWNLOAD',
+  ATTATCH = 'ATTATCH'
+}
